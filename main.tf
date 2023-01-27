@@ -5,7 +5,7 @@ locals {
     metadata = {
       name      = var.name
       namespace = var.namespace
-      labels    = {}
+      labels    = var.labels
     }
     spec = {
       host = var.host

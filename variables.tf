@@ -39,6 +39,12 @@ variable "key" {
   default     = null
 }
 
+variable "labels" {
+  type        = map(string)
+  description = "Labels to attach to the route"
+  default     = {}
+}
+
 variable "name" {
   type        = string
   description = "The name of the OpenShift route"
