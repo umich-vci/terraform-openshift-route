@@ -36,6 +36,7 @@ No modules.
 | <a name="input_ca_certificate"></a> [ca\_certificate](#input\_ca\_certificate) | The CA certificate corresponding to `certificate`. | `string` | `null` | no |
 | <a name="input_certificate"></a> [certificate](#input\_certificate) | The certificate to use on the router. | `string` | `null` | no |
 | <a name="input_destination_ca_certificate"></a> [destination\_ca\_certificate](#input\_destination\_ca\_certificate) | The CA certificate of the final destination. | `string` | `""` | no |
+| <a name="input_host"></a> [host](#input\_host) | The DNS hostname to use for the route. | `string` | `null` | no |
 | <a name="input_insecure_edge_termination_policy"></a> [insecure\_edge\_termination\_policy](#input\_insecure\_edge\_termination\_policy) | The insecure edge termination policy. | `string` | `"Redirect"` | no |
 | <a name="input_key"></a> [key](#input\_key) | The private key of the `certificate` used for the router. | `string` | `null` | no |
 | <a name="input_name"></a> [name](#input\_name) | The name of the OpenShift route | `string` | n/a | yes |

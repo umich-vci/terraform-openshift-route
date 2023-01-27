@@ -16,6 +16,12 @@ variable "destination_ca_certificate" {
   default     = ""
 }
 
+variable "host" {
+  type        = string
+  description = "The DNS hostname to use for the route."
+  default     = null
+}
+
 variable "insecure_edge_termination_policy" {
   type        = string
   description = "The insecure edge termination policy."

@@ -8,6 +8,7 @@ locals {
       labels    = {}
     }
     spec = {
+      host = var.host
       to = {
         kind   = "Service"
         name   = var.service
