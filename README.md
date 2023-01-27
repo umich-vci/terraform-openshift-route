@@ -1,5 +1,10 @@
 ## terraform-openshift-route
 
+There doesn't seem to be an OpenShift provider available for Terraform.
+
+This module will let you create OpenShift routes in code that is using the
+kubernetes provider to work with OpenShift.
+
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
