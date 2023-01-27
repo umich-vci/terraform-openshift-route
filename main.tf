@@ -14,7 +14,7 @@ locals {
       }
       tls = {
         termination                   = "edge"
-        insecureEdgeTerminationPolicy = "Redirect"
+        insecureEdgeTerminationPolicy = var.insecure_edge_termination_policy
         destinationCACertificate      = ""
       }
       port = {
@@ -29,6 +29,7 @@ resource "restapi_object" "main" {
   path      = "/apis/route.openshift.io/v1/namespaces/${var.namespace}/routes"
   data      = jsonencode(local.route_data)
   force_new = [
-    local.route_data.metadata.name
+    var.name,
+    var.namespace,
   ]
 }
