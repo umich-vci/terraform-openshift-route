@@ -9,8 +9,9 @@ locals {
     }
     spec = {
       to = {
-        kind = "Service"
-        name = var.service
+        kind   = "Service"
+        name   = var.service
+        weight = var.weight
       }
       tls = {
         termination                   = var.termination

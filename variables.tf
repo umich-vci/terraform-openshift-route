@@ -38,3 +38,14 @@ variable "target_port" {
   type        = string
   description = "The target port of the service to route to"
 }
+
+variable "weight" {
+  type        = number
+  description = "The weight of the target compared to others"
+  default     = 100
+
+  validation {
+    condition     = var.weight >= 0 && var.weight <= 100
+    error_message = "weight must be between 0 and 100."
+  }
+}
