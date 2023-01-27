@@ -23,6 +23,17 @@ variable "service" {
   description = "The name of the service to route to"
 }
 
+variable "termination" {
+  type        = string
+  description = "The termination type done by the router."
+  default     = "edge"
+
+  validation {
+    condition     = contains(["edge", "passthrough", "reencrypt"], var.termination)
+    error_message = "Must be one of \"edge\", \"passthrough\", or \"reencrypt\"."
+  }
+}
+
 variable "target_port" {
   type        = string
   description = "The target port of the service to route to"

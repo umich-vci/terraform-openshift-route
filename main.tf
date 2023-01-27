@@ -13,7 +13,7 @@ locals {
         name = var.service
       }
       tls = {
-        termination                   = "edge"
+        termination                   = var.termination
         insecureEdgeTerminationPolicy = var.insecure_edge_termination_policy
         destinationCACertificate      = ""
       }

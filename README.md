@@ -33,6 +33,7 @@ No modules.
 | <a name="input_namespace"></a> [namespace](#input\_namespace) | The name of the namespace to create the OpenShift route in | `string` | n/a | yes |
 | <a name="input_service"></a> [service](#input\_service) | The name of the service to route to | `string` | n/a | yes |
 | <a name="input_target_port"></a> [target\_port](#input\_target\_port) | The target port of the service to route to | `string` | n/a | yes |
+| <a name="input_termination"></a> [termination](#input\_termination) | The termination type done by the router. | `string` | `"edge"` | no |
 
 ## Outputs
 
