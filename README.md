@@ -42,5 +42,7 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_host"></a> [host](#output\_host) | The hostname pointing at the service |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
