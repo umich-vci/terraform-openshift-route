@@ -14,9 +14,12 @@ locals {
         weight = var.weight
       }
       tls = {
-        termination                   = var.termination
+        caCertificate                 = var.ca_certificate
+        certificate                   = var.certificate
+        destinationCACertificate      = var.destination_ca_certificate
         insecureEdgeTerminationPolicy = var.insecure_edge_termination_policy
-        destinationCACertificate      = ""
+        key                           = var.key
+        termination                   = var.termination
       }
       port = {
         targetPort = var.target_port

@@ -1,3 +1,21 @@
+variable "ca_certificate" {
+  type        = string
+  description = "The CA certificate corresponding to `certificate`."
+  default     = null
+}
+
+variable "certificate" {
+  type        = string
+  description = "The certificate to use on the router."
+  default     = null
+}
+
+variable "destination_ca_certificate" {
+  type        = string
+  description = "The CA certificate of the final destination."
+  default     = ""
+}
+
 variable "insecure_edge_termination_policy" {
   type        = string
   description = "The insecure edge termination policy."
@@ -9,10 +27,17 @@ variable "insecure_edge_termination_policy" {
   }
 }
 
+variable "key" {
+  type        = string
+  description = "The private key of the `certificate` used for the router."
+  default     = null
+}
+
 variable "name" {
   type        = string
   description = "The name of the OpenShift route"
 }
+
 variable "namespace" {
   type        = string
   description = "The name of the namespace to create the OpenShift route in"
